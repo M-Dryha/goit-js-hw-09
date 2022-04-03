@@ -42,3 +42,13 @@ input {
   font-size: 15px;
   font-weight: 600;
 }
+
+.btn {
+  font-size: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.input-timer {
+  font-size: 15px;
+}
