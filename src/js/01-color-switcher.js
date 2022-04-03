@@ -9,15 +9,15 @@ startBtn.addEventListener('click', onStartBtn);
 stopBtn.addEventListener('click', onStopBtn);
 
 
- bodyElem.style.backgroundColor = getRandomHexColor(); 
-
-
 let disabledBtn = false;
 let timerId = null;
 
+startBtn.disabled = disabledBtn;
+stopBtn.disabled = !disabledBtn;
+
 function onStartBtn() {
 
-    if (disabledBtn) {
+  if (disabledBtn) {
         return;
 }
   timerId = setInterval(() => {
@@ -25,12 +25,17 @@ function onStartBtn() {
         let newColor = getRandomHexColor();
         bodyElem.style.backgroundColor = newColor;
     }, 1000)
-   disabledBtn = true;
+  startBtn.disabled = !disabledBtn;
+  stopBtn.disabled = disabledBtn;
+  
 }
 
 function onStopBtn() {
 
     clearInterval(timerId);
-    disabledBtn = false;
+  startBtn.disabled = disabledBtn;
+stopBtn.disabled = !disabledBtn;
+
+  
 }
 

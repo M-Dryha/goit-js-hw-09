@@ -52,3 +52,16 @@ input {
 .input-timer {
   font-size: 15px;
 }
+
+.switcher-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-switcher {
+  padding: 10px 20px;
+  margin-left: 5px;
+  text-transform: uppercase;
+}
