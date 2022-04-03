@@ -21,9 +21,9 @@ function onFormSubmit(event) {
   }
   
      onPromise(dataPromises);
-  
 
 }
+
 function onPromise({ delay, step, amount}) {
  
   let newDelay = delay;
@@ -50,13 +50,15 @@ function createPromise(position, delay) {
     
     setTimeout(() => {
       if (shouldResolve) {
-        resolve({ position: position, delay: delay });
+        resolve({ position, delay});
       }
-       reject({ position: position, delay: delay });
+       reject({ position, delay});
     },delay)
   });
 
 }
+
+
 
 
 
